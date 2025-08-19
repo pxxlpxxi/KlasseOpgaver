@@ -8,9 +8,12 @@ using System.Xml.Serialization;
 
 namespace KlasseOpgaver
 {
+    /// <summary>
+    /// base class for personer, med felter til navn, adresse og telefonnummer
+    /// </summary>
     public class Person
     {
-        
+
         private readonly string _fornavn;
         private readonly string _efternavn;
         private readonly string _adresse;
@@ -30,9 +33,9 @@ namespace KlasseOpgaver
         }
 
         /// <summary>
-        /// 
+        /// metode til at udskrive en al data om en person
         /// </summary>
-        public void OpretPerson(string fornavn, string efternavn, string adresse, string tlf )
+        public void OpretPerson(string fornavn, string efternavn, string adresse, string tlf)
         {
             Person person = new(fornavn, efternavn, adresse, tlf);
 
@@ -76,7 +79,7 @@ namespace KlasseOpgaver
         }
         //public List<Person> ImportPeople()
         //{
-               
+
         //    People.Add(abLi); People.Add(alex); People.Add(flFi); People.Add(blBl); People.Add(giSk);
 
         //    return People;
