@@ -13,14 +13,6 @@ namespace KlasseOpgaver
             ContextLists ctx = new();
             List<Person> allPeople = ctx.GetAllPeople();
 
-            //List<Person> people = new(){
-            //    abLi,
-            //    giSk,
-            //    flom,
-            //    blom,
-            //    alex
-            //};
-
             //opretter et peodukt og udskriver produktets moms
             Produkt egg = new(1, 2.5, "stor");
             Console.WriteLine($"{egg.Moms:N2}");

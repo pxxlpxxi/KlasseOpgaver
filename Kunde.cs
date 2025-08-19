@@ -41,10 +41,11 @@ namespace KlasseOpgaver
         /// <summary>
         /// Metode til at udskrive informationen om en person
         /// </summary>
-        public void UdskrivPerson() //: base ()
+        public void UdskrivPerson()
         {
-            //metodekald til også at udskrive basens værdier
+            //metodekale til basen: udskriv nedarvet data (bases værdier)
             base.UdskrivPerson();
+            //udskriv sub class-specifik data
             Console.WriteLine(Email);
             Console.WriteLine(Rabatgruppe);
             Console.WriteLine(TotalIndkøb);

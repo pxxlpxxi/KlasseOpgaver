@@ -39,27 +39,6 @@ namespace KlasseOpgaver
         /// Størrelse på produktet (f.eks. "stor", "lille")
         /// </summary>
         public string Størrelse;
-
-
-        //public double Moms
-        //{
-        //    get { return _moms; }
-        //    set { _moms = value; }
-        //}
-
-
-
-        //public double Moms
-        //{
-        //    get { return UdregnMoms(Pris); }
-        //    set { Moms = value; }
-        //}
-        //public double Moms { set { value = Pris / 100 * 25; } }
-        //private double moms => Pris / 100 * 25;
-        //public void UdregnMoms(double pris)
-        //{
-        //    Moms = pris / 100 * 25;
-        //}
         /// <summary>
         /// Constructor for produktet
         /// </summary>
@@ -80,7 +59,7 @@ namespace KlasseOpgaver
         /// <returns>Returnerer samme pris</returns>
         public double PrisInformation(double pris)
         {
-            _moms = pris / 100 * 25;
+            _moms = pris / 100 * 25; //sætter værdi for moms
             return pris;
         }
     }

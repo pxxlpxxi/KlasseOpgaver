@@ -13,17 +13,19 @@ namespace KlasseOpgaver
     /// </summary>
     public class Person
     {
-
+        //private fields
         private readonly string _fornavn;
         private readonly string _efternavn;
         private readonly string _adresse;
         private readonly string _tlfnr;
 
+        // public properties
         public string Fornavn => _fornavn;
         public string Efternavn => _efternavn;
         public string Adresse => _adresse;
         public string Tlfnr => _tlfnr;
 
+        //constructor
         public Person(string fornavn, string efternavn, string adresse, string tlfnr)
         {
             _fornavn = fornavn;
@@ -38,33 +40,6 @@ namespace KlasseOpgaver
         public void OpretPerson(string fornavn, string efternavn, string adresse, string tlf)
         {
             Person person = new(fornavn, efternavn, adresse, tlf);
-
-            //    Console.Write("Fornavn: ");
-            //    string fornavn= Console.ReadLine();
-            //    Console.Write("Efternavn: ");
-            //    string efternavn= Console.ReadLine();
-            //    Console.Write("Adresse: ");
-            //    string adresse= Console.ReadLine();
-            //    Console.Write("Telefonnr: ");
-            //    var cursor = Console.GetCursorPosition();
-
-            //    int telefonnr=0;
-            //    bool tlfGyldig = false;
-            //    while (!tlfGyldig)
-            //    {
-            //        string tlf =Console.ReadLine();
-            //        if (int.TryParse(tlf, out telefonnr)) {
-            //            Person person = new(fornavn, efternavn, adresse, telefonnr);
-            //            tlfGyldig=true;
-            //        }
-            //        else
-            //        {
-            //            string correction = new string(' ', tlf.Length);
-            //            Console.SetCursorPosition(cursor.Left, cursor.Top);
-            //            Console.Write(correction);
-            //            Console.SetCursorPosition(cursor.Left, cursor.Top);
-            //        }
-            //    }
         }
         /// <summary>
         /// En metode til at udskrive alle værdier for en person
@@ -77,13 +52,6 @@ namespace KlasseOpgaver
             Console.WriteLine(Adresse);
             Console.WriteLine(Tlfnr);
         }
-        //public List<Person> ImportPeople()
-        //{
-
-        //    People.Add(abLi); People.Add(alex); People.Add(flFi); People.Add(blBl); People.Add(giSk);
-
-        //    return People;
-        //}
     }
 
 }
