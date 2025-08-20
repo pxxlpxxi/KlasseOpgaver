@@ -18,7 +18,7 @@ namespace KlasseOpgaver
         /// <summary>
         /// Public read-only liste over personer (kan ikke ændres udefra)
         /// </summary>
-        public IReadOnlyList<Person> AllPeople => _allPeople.AsReadOnly();
+        public List<Person> AllPeople => _allPeople;
 
         /// <summary>
         /// Constructor der opretter 5 personer og tilføjer dem til listen
