@@ -13,8 +13,34 @@ namespace KlasseOpgaver
             ContextLists ctx = new();
             List<Person> allPeople = ctx.GetAllPeople();
 
-            Box box1 =new(Størrelse.lille);
-            Box box2 =new(Størrelse.lille);
+            Box box1 =new(3,4,5, boxType.lille);
+            Box box2 =new(5,6,7,boxType.lille);
+            Box box3 = new();
+            box3.Højde = 8;
+            box3.Bredde = 8;
+            box3.Længde = 1;
+            box3.Type = boxType.stor;
+            Box box4 = new();
+            box4.Højde = 4;
+            box4.Bredde = 5;
+            box4.Længde = 6;
+            box4.Type = boxType.stor;
+            Box box6 = new(5, 6, 7, boxType.mellem);
+            Box box5 = new(5, 6, 7, boxType.mellem);
+
+            List<Box> boxes = new List<Box>() { box1, box2, box3, box4, box5 };
+            boxes.Add(box6); 
+            boxes.Sort();
+            boxes.ForEach(box =>
+            {
+            //Console.WriteLine(box.Højde.ToString(), box.Længde, box.Bredde, box.Type);
+            Console.WriteLine(box.ToString());
+            });
+
+            Box box9 = box3 + box5;
+            Console.WriteLine("Plusbox: " + box9.ToString());
+            //boxes.ForEach(box => { Console.WriteLine(box.Højde.ToString(), box.Længde, box.Bredde, box.Type); });
+            Console.WriteLine();
             //opretter et peodukt og udskriver produktets moms
             Produkt egg = new(1, 2.5, "stor");
             Console.WriteLine($"{egg.Moms:N2}");
@@ -25,6 +51,8 @@ namespace KlasseOpgaver
                 person.UdskrivPerson();
                 Console.WriteLine();
             }
+
+            
 
             PersonV2 pe1 = new("FørstePersonsFornavn", "PersonsEfternavn", "PersonsAdresse", "PersonsPostnummer", "Personsby");
             PersonV2 pe2 = new("AndenPersonsFornavn", "PersonsEfternavn", "PersonsAdresse", "PersonsPostnummer", "Personsby");
